@@ -1,0 +1,115 @@
+id,gender,age,hypertension,heart_disease,ever_married,work_type,Residence_type,avg_glucose_level,bmi,smoking_status,stroke,bmi group,bmi group 2
+36275,Female,54.0,0,0,Yes,Private,Rural,206.72,26.7,never smoked,0,25-29.9,Overweight
+36331,Male,18.0,0,0,No,Private,Rural,70.34,24.2,unknown,0,18.5-24.9,Normal weight
+36355,Male,58.0,0,0,Yes,Govt_job,Rural,111.73,34.6,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36377,Female,44.0,0,0,Yes,Private,Rural,222.29,38.2,never smoked,0,35-39.9,Obese Class II (Severely obese)
+36317,Female,41.0,0,0,Yes,Private,Rural,134.29,26.8,smokes,0,25-29.9,Overweight
+36366,Male,77.0,0,0,Yes,Govt_job,Urban,64.4,27.8,never smoked,0,25-29.9,Overweight
+36375,Male,50.0,0,0,Yes,Private,Rural,59.48,26.6,unknown,0,25-29.9,Overweight
+36338,Female,39.0,1,0,Yes,Private,Rural,58.09,39.2,smokes,1,35-39.9,Obese Class II (Severely obese)
+36298,Female,48.0,0,0,Yes,Self-employed,Rural,71.93,41.7,never smoked,0,40-44.9,Obese Class III (Very severely obese)
+36431,Male,39.0,0,0,Yes,Govt_job,Rural,155.23,36.2,never smoked,0,35-39.9,Obese Class II (Severely obese)
+36388,Male,44.0,1,0,Yes,Private,Rural,91.28,26.5,never smoked,0,25-29.9,Overweight
+36278,Male,30.0,0,0,No,Self-employed,Urban,55.58,27.0,never smoked,0,25-29.9,Overweight
+36410,Male,63.0,0,0,Yes,Private,Urban,228.12,38.8,formerly smoked,0,35-39.9,Obese Class II (Severely obese)
+36327,Male,46.0,0,0,Yes,Private,Urban,67.5,30.4,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36273,Male,76.0,0,0,Yes,Private,Rural,75.8,29.3,unknown,0,25-29.9,Overweight
+36448,Male,68.0,0,0,Yes,Private,Urban,125.7,33.9,formerly smoked,0,30-34.9,Obese Class I (Moderately obese)
+36438,Male,72.0,0,0,Yes,Private,Rural,81.35,34.8,formerly smoked,0,30-34.9,Obese Class I (Moderately obese)
+36325,Male,51.0,1,0,Yes,Self-employed,Urban,158.08,25.3,never smoked,0,25-29.9,Overweight
+36297,Female,77.0,1,0,No,Private,Urban,207.58,39.3,never smoked,0,35-39.9,Obese Class II (Severely obese)
+36316,Female,63.0,1,0,Yes,Private,Rural,114.95,43.2,never smoked,0,40-44.9,Obese Class III (Very severely obese)
+36358,Female,25.0,0,0,No,Private,Urban,256.79,0.0,unknown,0,unknown,unknown
+36250,Female,65.0,0,0,Yes,Private,Rural,70.14,37.2,formerly smoked,0,35-39.9,Obese Class II (Severely obese)
+36344,Female,12.0,0,0,No,children,Rural,83.8,17.4,unknown,0,<18.5,Underweight
+36357,Female,64.0,0,0,Yes,Private,Urban,108.53,36.1,never smoked,0,35-39.9,Obese Class II (Severely obese)
+36398,Male,29.0,0,0,No,Private,Rural,85.37,24.8,never smoked,0,18.5-24.9,Normal weight
+36386,Male,54.0,0,0,Yes,Private,Urban,59.21,32.7,unknown,0,30-34.9,Obese Class I (Moderately obese)
+36309,Female,2.0,0,0,No,children,Rural,100.67,20.3,unknown,0,18.5-24.9,Normal weight
+36281,Male,48.0,1,0,Yes,Private,Rural,57.88,35.3,smokes,0,35-39.9,Obese Class II (Severely obese)
+36350,Male,11.0,0,0,No,children,Urban,65.09,19.6,unknown,0,18.5-24.9,Normal weight
+36326,Female,35.0,0,0,No,Private,Urban,71.19,20.7,never smoked,0,18.5-24.9,Normal weight
+36372,Female,46.0,0,0,Yes,Private,Rural,103.21,33.1,unknown,0,30-34.9,Obese Class I (Moderately obese)
+36392,Female,61.0,0,0,Yes,Self-employed,Rural,116.77,29.8,never smoked,0,25-29.9,Overweight
+36253,Female,25.0,0,0,No,Private,Rural,62.63,31.7,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36359,Male,58.0,1,0,Yes,Private,Urban,64.9,31.3,smokes,0,30-34.9,Obese Class I (Moderately obese)
+36260,Male,45.0,0,0,Yes,Private,Urban,92.03,27.8,never smoked,0,25-29.9,Overweight
+36255,Male,59.0,0,0,Yes,Self-employed,Rural,118.03,35.5,smokes,1,35-39.9,Obese Class II (Severely obese)
+36425,Male,82.0,0,0,Yes,Private,Urban,60.58,21.0,never smoked,0,18.5-24.9,Normal weight
+36364,Female,2.0,0,0,No,children,Rural,65.98,16.4,unknown,0,<18.5,Underweight
+36346,Male,52.0,0,0,Yes,Govt_job,Urban,61.4,31.9,smokes,0,30-34.9,Obese Class I (Moderately obese)
+36424,Female,70.0,0,0,Yes,Private,Urban,55.46,36.9,formerly smoked,0,35-39.9,Obese Class II (Severely obese)
+36290,Male,43.0,0,0,Yes,Private,Rural,235.08,31.5,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36380,Male,28.0,0,0,No,Private,Rural,125.07,28.0,never smoked,0,25-29.9,Overweight
+36263,Female,37.0,0,0,Yes,Govt_job,Rural,125.9,22.8,unknown,0,18.5-24.9,Normal weight
+36418,Female,66.0,0,0,Yes,Self-employed,Rural,75.89,32.0,smokes,0,30-34.9,Obese Class I (Moderately obese)
+36415,Female,49.0,0,0,No,Private,Urban,87.79,41.1,never smoked,0,40-44.9,Obese Class III (Very severely obese)
+36329,Male,65.0,0,0,Yes,Private,Rural,211.88,35.8,formerly smoked,0,35-39.9,Obese Class II (Severely obese)
+36382,Female,68.0,0,0,Yes,Private,Rural,98.23,41.2,unknown,0,40-44.9,Obese Class III (Very severely obese)
+36304,Female,63.0,0,0,Yes,Private,Urban,60.41,25.0,unknown,0,18.5-24.9,Normal weight
+36439,Male,65.0,0,0,No,Private,Rural,111.91,24.6,never smoked,0,18.5-24.9,Normal weight
+36280,Female,12.0,0,0,No,children,Rural,118.02,25.6,never smoked,0,25-29.9,Overweight
+36343,Female,22.0,0,0,No,Private,Urban,61.93,29.9,never smoked,0,25-29.9,Overweight
+36332,Female,33.0,0,0,Yes,Private,Rural,126.13,30.4,smokes,0,30-34.9,Obese Class I (Moderately obese)
+36276,Male,35.0,1,0,Yes,Self-employed,Rural,71.16,30.7,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36322,Male,18.0,0,0,No,Private,Urban,154.78,26.9,unknown,0,25-29.9,Overweight
+36315,Female,15.0,0,0,No,children,Urban,96.48,22.7,unknown,0,18.5-24.9,Normal weight
+36440,Female,56.0,0,0,Yes,Govt_job,Rural,127.62,39.5,never smoked,0,35-39.9,Obese Class II (Severely obese)
+36356,Female,68.0,0,0,Yes,Self-employed,Rural,69.08,25.5,unknown,0,25-29.9,Overweight
+36404,Female,61.0,0,0,Yes,Self-employed,Urban,55.54,32.1,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36420,Female,82.0,1,1,No,Self-employed,Rural,165.12,25.4,never smoked,1,25-29.9,Overweight
+36401,Male,24.0,0,0,Yes,Private,Urban,61.66,25.3,unknown,0,25-29.9,Overweight
+36300,Male,79.0,1,1,No,Self-employed,Urban,197.02,26.2,never smoked,0,25-29.9,Overweight
+36374,Male,11.0,0,0,No,children,Rural,167.71,17.7,unknown,0,<18.5,Underweight
+36353,Male,64.0,1,0,Yes,Private,Rural,56.52,25.7,formerly smoked,0,25-29.9,Overweight
+36417,Male,65.0,1,0,Yes,Govt_job,Urban,70.69,26.1,formerly smoked,0,25-29.9,Overweight
+36400,Female,41.0,0,0,Yes,Govt_job,Rural,64.79,19.5,smokes,0,18.5-24.9,Normal weight
+36436,Male,1.32,0,0,No,children,Urban,82.52,36.4,unknown,0,35-39.9,Obese Class II (Severely obese)
+36393,Female,15.0,0,0,No,children,Rural,78.8,27.7,unknown,0,25-29.9,Overweight
+36397,Male,66.0,0,0,Yes,Private,Urban,106.47,29.8,smokes,1,25-29.9,Overweight
+36347,Female,58.0,0,0,Yes,Private,Urban,87.19,26.6,never smoked,0,25-29.9,Overweight
+36295,Male,72.0,0,1,Yes,Self-employed,Rural,65.09,25.8,formerly smoked,0,25-29.9,Overweight
+36446,Male,21.0,0,0,No,Private,Urban,112.35,23.5,never smoked,0,18.5-24.9,Normal weight
+36340,Female,12.0,0,0,No,children,Urban,95.99,20.8,smokes,0,18.5-24.9,Normal weight
+36450,Male,2.0,0,0,No,children,Rural,139.05,17.2,unknown,0,<18.5,Underweight
+36299,Female,2.0,0,0,No,children,Urban,79.41,17.0,unknown,0,<18.5,Underweight
+36274,Male,63.0,1,1,Yes,Private,Urban,233.92,33.9,formerly smoked,0,30-34.9,Obese Class I (Moderately obese)
+36379,Female,1.08,0,0,No,children,Urban,120.21,17.1,unknown,0,<18.5,Underweight
+36265,Female,20.0,0,0,No,Private,Urban,71.42,35.2,never smoked,0,35-39.9,Obese Class II (Severely obese)
+36369,Female,35.0,0,0,Yes,Self-employed,Urban,95.21,33.2,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36351,Female,34.0,0,0,Yes,Private,Rural,104.06,20.6,unknown,0,18.5-24.9,Normal weight
+36291,Female,29.0,0,0,No,Private,Rural,121.11,29.0,never smoked,0,25-29.9,Overweight
+36289,Female,29.0,0,0,Yes,Private,Urban,127.42,34.2,unknown,0,30-34.9,Obese Class I (Moderately obese)
+36394,Female,79.0,0,0,Yes,Self-employed,Rural,110.19,42.5,formerly smoked,0,40-44.9,Obese Class III (Very severely obese)
+36402,Male,1.72,0,0,No,children,Urban,83.16,14.0,unknown,0,<18.5,Underweight
+36320,Female,3.0,0,0,No,children,Rural,66.69,18.4,unknown,0,<18.5,Underweight
+36267,Female,42.0,1,0,No,Private,Rural,218.83,53.6,never smoked,0,50-59.9,Obese Class V (Super Obese)
+36313,Female,32.0,0,0,No,Private,Urban,80.84,23.8,never smoked,0,18.5-24.9,Normal weight
+36348,Female,63.0,1,0,Yes,Private,Urban,241.7,42.7,formerly smoked,0,40-44.9,Obese Class III (Very severely obese)
+36360,Male,54.0,1,0,Yes,Self-employed,Rural,70.32,29.3,unknown,0,25-29.9,Overweight
+36449,Female,62.0,1,0,Yes,Private,Urban,58.01,22.3,never smoked,0,18.5-24.9,Normal weight
+36403,Male,19.0,0,0,No,Private,Rural,67.83,24.5,never smoked,0,18.5-24.9,Normal weight
+36335,Female,55.0,0,0,Yes,Private,Rural,66.92,32.4,unknown,0,30-34.9,Obese Class I (Moderately obese)
+36434,Female,62.0,0,0,Yes,Private,Rural,65.67,25.5,smokes,0,25-29.9,Overweight
+36257,Male,3.0,0,0,No,children,Urban,124.77,16.0,unknown,0,<18.5,Underweight
+36443,Female,58.0,1,0,Yes,Private,Rural,135.22,26.1,never smoked,0,25-29.9,Overweight
+36296,Male,31.0,0,0,Yes,Private,Urban,97.01,28.9,never smoked,0,25-29.9,Overweight
+36409,Female,58.0,0,0,Yes,Private,Rural,67.1,30.3,formerly smoked,0,30-34.9,Obese Class I (Moderately obese)
+36352,Female,76.0,0,0,Yes,Self-employed,Rural,208.11,29.4,unknown,0,25-29.9,Overweight
+36252,Female,42.0,0,0,Yes,Private,Urban,127.35,42.0,unknown,0,40-44.9,Obese Class III (Very severely obese)
+36349,Female,36.0,0,0,Yes,Self-employed,Urban,61.1,35.9,unknown,0,35-39.9,Obese Class II (Severely obese)
+36269,Male,9.0,0,0,No,children,Rural,68.48,25.6,unknown,0,25-29.9,Overweight
+36318,Female,68.0,0,0,Yes,Private,Rural,192.26,42.3,never smoked,1,40-44.9,Obese Class III (Very severely obese)
+36430,Female,45.0,0,0,No,Govt_job,Rural,111.76,39.3,unknown,0,35-39.9,Obese Class II (Severely obese)
+36445,Female,26.0,0,0,Yes,Private,Urban,112.2,24.5,never smoked,0,18.5-24.9,Normal weight
+36373,Male,46.0,0,0,Yes,Govt_job,Urban,174.95,49.0,never smoked,0,45-49.9,Obese Class IV (Morbidly Obese)
+36407,Female,18.0,0,0,No,Private,Urban,85.74,23.1,never smoked,0,18.5-24.9,Normal weight
+36333,Male,36.0,0,0,Yes,Govt_job,Urban,116.19,30.8,smokes,0,30-34.9,Obese Class I (Moderately obese)
+36385,Male,54.0,0,0,Yes,Self-employed,Rural,217.5,27.9,smokes,0,25-29.9,Overweight
+36421,Female,36.0,0,0,Yes,Govt_job,Urban,81.86,23.2,never smoked,0,18.5-24.9,Normal weight
+36406,Male,65.0,0,0,Yes,Private,Rural,93.72,31.6,never smoked,0,30-34.9,Obese Class I (Moderately obese)
+36428,Female,29.0,0,0,Yes,Private,Rural,68.11,25.1,smokes,0,25-29.9,Overweight
+36427,Male,26.0,0,0,Yes,Private,Urban,104.01,31.1,formerly smoked,0,30-34.9,Obese Class I (Moderately obese)
+36423,Female,74.0,0,0,Yes,Self-employed,Rural,136.82,34.3,unknown,0,30-34.9,Obese Class I (Moderately obese)
+36301,Female,38.0,0,0,Yes,Private,Rural,68.85,17.3,never smoked,0,<18.5,Underweight
+36271,Female,82.0,0,0,Yes,Private,Urban,79.48,20.6,never smoked,0,18.5-24.9,Normal weight
