@@ -77,117 +77,120 @@
                 <br>
                 <!-- enter form here -->
                 <div class="form-group">
-                    <!-- hypertension input here -->
-                    <div class="row">
-                        <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
-                        <div class="col-sm-8">
-                            <div class="form-check">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="hypertensionYes" value="option1">
-                                    <label class="form-check-label" for="hypertensionYes">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="hypertensionNo" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                    <form id="form">
+                        <!-- hypertension input here -->
+                        <div class="row">
+                            <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
+                            <div class="col-sm-8">
+                                <div class="form-check" id="hypertension">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                                            id="hypertension" value="yes">
+                                        <label class="form-check-label" for="hypertension">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                                            id="hypertension" value="no">
+                                        <label class="form-check-label" for="hypertension">No</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- heart disease input here -->
-                    <div class="row">
-                        <legend class="col-form-label col-sm-4 pt-0">Heart Disease:</legend>
-                        <div class="col-sm-8">
-                            <div class="form-check">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="heartDiseaseYes" value="option1">
-                                    <label class="form-check-label" for="heartDiseaseYes">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="heartDiseaseNo" value="option2">
-                                    <label class="form-check-label" for="heartDiseaseNo">No</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ever married input here -->
-                    <div class="row">
-                        <legend class="col-form-label col-sm-4 pt-0">Ever Married:</legend>
-                        <div class="col-sm-8">
-                            <div class="form-check">
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="everMarriedYes" value="option1">
-                                    <label class="form-check-label" for="everMarriedYes">Yes</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
-                                        id="everMarriedNo" value="option2">
-                                    <label class="form-check-label" for="everMarriedNo">No</label>
+                        <!-- heart disease input here -->
+                        <div class="row">
+                            <legend class="col-form-label col-sm-4 pt-0">Heart Disease:</legend>
+                            <div class="col-sm-8">
+                                <div class="form-check" id="heartDisease">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
+                                            id="heartDisease" value="yes">
+                                        <label class="form-check-label" for="heartDisease">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
+                                            id="heartDisease" value="no">
+                                        <label class="form-check-label" for="heartDiseaseNo">No</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- smoking status input here -->
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Smoking Status:</label>
-                            <select class="custom-select mr-sm-2" id="smokingStatusInput">
-                                <option selected>Choose...</option>
-                                <option value="1">Never</option>
-                                <option value="2">Formerly</option>
-                                <option value="3">Smoke</option>
-                            </select>
+                        <!-- ever married input here -->
+                        <div class="row">
+                            <legend class="col-form-label col-sm-4 pt-0">Ever Married:</legend>
+                            <div class="col-sm-8">
+                                <div class="form-check" id="everMarried">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                                            id="everMarried" value="yes">
+                                        <label class="form-check-label" for="everMarriedYes">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                                            id="everMarried" value="no">
+                                        <label class="form-check-label" for="everMarriedNo">No</label>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!-- residence type input here -->
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
-                            <select class="custom-select mr-sm-2" id="residenceTypeInput">
-                                <option selected>Choose...</option>
-                                <option value="1">Urban</option>
-                                <option value="2">Rural</option>
-                            </select>
+                        <!-- smoking status input here -->
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">Smoking Status:</label>
+                                <select class="custom-select mr-sm-2" id="smokingStatusInput">
+                                    <option selected>Choose...</option>
+                                    <option value="neverSmoked">Never Smoked</option>
+                                    <option value="formerSmoker">Former Smoker</option>
+                                    <option value="currentlySmoke">Currently Smoke</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <!-- work type input here -->
-                    <div class="form-row align-items-center">
-                        <div class="col-auto my-1">
-                            <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
-                            <select class="custom-select mr-sm-2" id="workTypeInput">
-                                <option selected>Choose...</option>
-                                <option value="1">Private</option>
-                                <option value="2">Self-Employed</option>
-                                <option value="3">Child</option>
-                                <option value="4">Government</option>
-                                <option value="5">Never Worked</option>
-                            </select>
+                        <!-- residence type input here -->
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
+                                <select class="custom-select mr-sm-2" id="residenceTypeInput">
+                                    <option selected>Choose...</option>
+                                    <option value="urban">Urban</option>
+                                    <option value="rural">Rural</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                    <!-- age, bmi, glucose input -->
-                    <div class="form-row">
-                        <!-- age input -->
-                        <div class="form-group col-md-3">
-                            <label for="ageInput">Age:</label>
-                            <input type="text" class="form-control" id="ageInput">
+                        <!-- work type input here -->
+                        <div class="form-row align-items-center">
+                            <div class="col-auto my-1">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
+                                <select class="custom-select mr-sm-2" id="workTypeInput">
+                                    <option selected>Choose...</option>
+                                    <option value="private">Private</option>
+                                    <option value="selfEmployed">Self-Employed</option>
+                                    <option value="child">Child</option>
+                                    <option value="government">Government</option>
+                                    <option value="neverWorked">Never Worked</option>
+                                </select>
+                            </div>
                         </div>
-                        <!-- bmi input -->
-                        <div class="form-group col-md-3">
-                            <label for="bmiInput">BMI:</label>
-                            <input type="text" class="form-control" id="bmiInput">
-                        </div>
-                        <!-- glucose input -->
-                        <div class="form-group col-md-3">
-                            <label for="glucoseInput">Glucose Level:</label>
-                            <input type="text" class="form-control" id="glucoseInput">
-                        </div>
-                    </div> <!-- close age, bmi, glucose input -->
-                    <center><button class="btn btn-primary" type="submit">Submit Form</button></center>
+                        <!-- age, bmi, glucose input -->
+                        <div class="form-row">
+                            <!-- age input -->
+                            <div class="form-group col-md-3">
+                                <label for="ageInput">Age:</label>
+                                <input type="text" class="form-control" id="ageInput">
+                            </div>
+                            <!-- bmi input -->
+                            <div class="form-group col-md-3">
+                                <label for="bmiInput">BMI:</label>
+                                <input type="text" class="form-control" id="bmiInput">
+                            </div>
+                            <!-- glucose input -->
+                            <div class="form-group col-md-3">
+                                <label for="glucoseInput">Glucose Level:</label>
+                                <input type="text" class="form-control" id="glucoseInput">
+                            </div>
+                        </div> <!-- close age, bmi, glucose input -->
+                        <center><button class="btn btn-primary" id="predictorButton" type="submit">Submit Form</button>
+                        </center>
+                    </form>
                 </div> <!-- close form -->
             </div> <!-- close where our input form will be -->
         </div>
@@ -210,6 +213,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
         crossorigin="anonymous"></script>
+
+    <!-- d3 -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="../static/js/app.js"></script>
