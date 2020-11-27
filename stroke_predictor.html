@@ -52,17 +52,17 @@
     <div class="container">
         <!-- row #1 -->
         <div class="row">
-            <!-- col 1 through 3 -->
-            <div class="col-lg-3">
+            <!-- col 1 through 2 -->
+            <div class="col-lg-2">
             </div>
-            <!-- col 4 through 9 -->
-            <div class="col-lg-6">
+            <!-- col 3 through 10 -->
+            <div class="col-lg-8">
                 <br><br>
-                <h1>Stroke Predictor</h1>
+                <center><h1>Stroke Predictor</h1></center>
                 <br><br>
             </div>
-            <!-- col 10 through 12 -->
-            <div class="col-lg-3">
+            <!-- col 11 through 12 -->
+            <div class="col-lg-2">
             </div>
         </div>
         <!-- row #2 -->
@@ -70,9 +70,9 @@
             <!-- col 1 through 2 -->
             <div class="col-lg-2">
             </div>
-            <!-- col 3 through 8-->
+            <!-- col 3 through 10-->
             <!-- where our input form will be -->
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <p>Fill in your details below and click <strong>Submit Form</strong> to determine your prediction.</p>
                 <br>
                 <!-- enter form here -->
@@ -85,12 +85,12 @@
                                 <div class="form-check" id="hypertension">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
-                                            id="hypertension" value="yes">
+                                            id="hypertension" value="1">
                                         <label class="form-check-label" for="hypertension">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
-                                            id="hypertension" value="no">
+                                            id="hypertension" value="0">
                                         <label class="form-check-label" for="hypertension">No</label>
                                     </div>
                                 </div>
@@ -104,12 +104,12 @@
                                 <div class="form-check" id="heartDisease">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-                                            id="heartDisease" value="yes">
+                                            id="heartDisease" value="1">
                                         <label class="form-check-label" for="heartDisease">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-                                            id="heartDisease" value="no">
+                                            id="heartDisease" value="0">
                                         <label class="form-check-label" for="heartDiseaseNo">No</label>
                                     </div>
                                 </div>
@@ -122,12 +122,12 @@
                                 <div class="form-check" id="everMarried">
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
-                                            id="everMarried" value="yes">
+                                            id="everMarried" value="1">
                                         <label class="form-check-label" for="everMarriedYes">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
-                                            id="everMarried" value="no">
+                                            id="everMarried" value="0">
                                         <label class="form-check-label" for="everMarriedNo">No</label>
                                     </div>
                                 </div>
@@ -139,9 +139,9 @@
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Smoking Status:</label>
                                 <select class="custom-select mr-sm-2" id="smokingStatusInput">
                                     <option selected>Choose...</option>
-                                    <option value="neverSmoked">Never Smoked</option>
-                                    <option value="formerSmoker">Former Smoker</option>
-                                    <option value="currentlySmoke">Currently Smoke</option>
+                                    <option value="0">Never Smoked</option>
+                                    <option value="1">Former Smoker</option>
+                                    <option value="2">Currently Smoke</option>
                                 </select>
                             </div>
                         </div>
@@ -151,8 +151,8 @@
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
                                 <select class="custom-select mr-sm-2" id="residenceTypeInput">
                                     <option selected>Choose...</option>
-                                    <option value="urban">Urban</option>
-                                    <option value="rural">Rural</option>
+                                    <option value="0">Urban</option>
+                                    <option value="1">Rural</option>
                                 </select>
                             </div>
                         </div>
@@ -162,11 +162,11 @@
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
                                 <select class="custom-select mr-sm-2" id="workTypeInput">
                                     <option selected>Choose...</option>
-                                    <option value="private">Private</option>
-                                    <option value="selfEmployed">Self-Employed</option>
-                                    <option value="child">Child</option>
-                                    <option value="government">Government</option>
-                                    <option value="neverWorked">Never Worked</option>
+                                    <option value="0">Private</option>
+                                    <option value="1">Self-Employed</option>
+                                    <option value="2">Child</option>
+                                    <option value="3">Government</option>
+                                    <option value="4">Never Worked</option>
                                 </select>
                             </div>
                         </div>

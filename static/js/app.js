@@ -49,4 +49,7 @@ function runEnter() {
     console.log(`Age Value Entered: ${ageInputValue}`);
     console.log(`BMI Value Entered: ${bmiInputValue}`);
     console.log(`Glucose Value Entered: ${glucoseInputValue}`);
+
+    var values_to_send = [hypertensionInputValue, heartDiseaseInputValue, everMarriedInputValue, smokingStatusInputValue, residenceTypeInputValue, workTypeInputValue, ageInputValue, bmiInputValue, glucoseInputValue]
+    console.log(`Values to send to model: ${values_to_send}`);
 }
