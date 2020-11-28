@@ -18,6 +18,7 @@ function runEnter() {
     d3.event.preventDefault();
 
     // select input elements
+    var genderInputElement = d3.select("#gender.form-check-input:checked");
     var hypertensionInputElement = d3.select("#hypertension.form-check-input:checked");
     var heartDiseaseInputElement = d3.select("#heartDisease.form-check-input:checked");
     var everMarriedInputElement = d3.select("#everMarried.form-check-input:checked");
@@ -30,6 +31,7 @@ function runEnter() {
 
 
     // get value from input elements
+    var genderInputValue = genderInputElement.property("value");
     var hypertensionInputValue = hypertensionInputElement.property("value");
     var heartDiseaseInputValue = heartDiseaseInputElement.property("value");
     var everMarriedInputValue = everMarriedInputElement.property("value");
@@ -40,6 +42,7 @@ function runEnter() {
     var bmiInputValue = bmiInputElement.property("value");
     var glucoseInputValue = glucoseInputElement.property("value");
 
+    console.log(`Gender Value Selected: ${genderInputValue}`);
     console.log(`Hypertension Value Selected: ${hypertensionInputValue}`);
     console.log(`Heart Disease Value Selected: ${heartDiseaseInputValue}`);
     console.log(`Ever Married Value Selected: ${everMarriedInputValue}`);
@@ -50,6 +53,6 @@ function runEnter() {
     console.log(`BMI Value Entered: ${bmiInputValue}`);
     console.log(`Glucose Value Entered: ${glucoseInputValue}`);
 
-    var values_to_send = [hypertensionInputValue, heartDiseaseInputValue, everMarriedInputValue, smokingStatusInputValue, residenceTypeInputValue, workTypeInputValue, ageInputValue, bmiInputValue, glucoseInputValue]
+    var values_to_send = [genderInputValue, hypertensionInputValue, heartDiseaseInputValue, everMarriedInputValue, smokingStatusInputValue, residenceTypeInputValue, workTypeInputValue, ageInputValue, bmiInputValue, glucoseInputValue]
     console.log(`Values to send to model: ${values_to_send}`);
 }

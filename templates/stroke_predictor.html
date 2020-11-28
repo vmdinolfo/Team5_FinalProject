@@ -62,7 +62,9 @@
             <!-- col 3 through 10 -->
             <div class="col-lg-8">
                 <br><br>
-                <center><h1>Stroke Predictor</h1></center>
+                <center>
+                    <h1>Stroke Predictor</h1>
+                </center>
                 <br><br>
             </div>
             <!-- col 11 through 12 -->
@@ -81,138 +83,153 @@
                 <br>
                 <!-- enter form here -->
                 <div class="form-group">
-                    <!-- input section using form and post method from TA Farshad's example -->
-                    <form id="form" action ="{{url_for('predict')}}"method= "post">
-                        <!-- hypertension input here -->
-                        <div class="row">
-                            <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
-                            <div class="col-sm-8">
-                                <div class="form-check" id="hypertension">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
-                                            id="hypertension" value="1">
-                                        <label class="form-check-label" for="hypertension">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                    <form id="form">
+                    <!-- gender input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Gender:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="gender">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsG"
+                                        id="gender" value="1">
+                                    <label class="form-check-label" for="gender">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsG"
+                                        id="gender" value="0" checked>
 
-                                            id="hypertension" value="0" checked>
-
-                                        <label class="form-check-label" for="hypertension">No</label>
-                                    </div>
+                                    <label class="form-check-label" for="gender">Female</label>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <!-- hypertension input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="hypertension">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                                        id="hypertension" value="1">
+                                    <label class="form-check-label" for="hypertension">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                                        id="hypertension" value="0" checked>
 
-                        <!-- heart disease input here -->
-                        <div class="row">
-                            <legend class="col-form-label col-sm-4 pt-0">Heart Disease:</legend>
-                            <div class="col-sm-8">
-                                <div class="form-check" id="heartDisease">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-                                            id="heartDisease" value="1">
-                                        <label class="form-check-label" for="heartDisease">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-
-                                            id="heartDisease" value="0" checked>
-
-                                        <label class="form-check-label" for="heartDiseaseNo">No</label>
-                                    </div>
+                                    <label class="form-check-label" for="hypertension">No</label>
                                 </div>
                             </div>
                         </div>
-                        <!-- ever married input here -->
-                        <div class="row">
-                            <legend class="col-form-label col-sm-4 pt-0">Ever Married:</legend>
-                            <div class="col-sm-8">
-                                <div class="form-check" id="everMarried">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
-                                            id="everMarried" value="1">
-                                        <label class="form-check-label" for="everMarriedYes">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                    </div>
 
-                                            id="everMarried" value="0" checked>
+                    <!-- heart disease input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Heart Disease:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="heartDisease">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
+                                        id="heartDisease" value="1">
+                                    <label class="form-check-label" for="heartDisease">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
+                                        id="heartDisease" value="0" checked>
 
-                                        <label class="form-check-label" for="everMarriedNo">No</label>
-                                    </div>
+                                    <label class="form-check-label" for="heartDiseaseNo">No</label>
                                 </div>
                             </div>
                         </div>
-                        <!-- smoking status input here -->
-                        <div class="form-row align-items-center">
-                            <div class="col-auto my-1">
-                                <label class="mr-sm-2" for="inlineFormCustomSelect">Smoking Status:</label>
+                    </div>
+                    <!-- ever married input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Ever Married:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="everMarried">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                                        id="everMarried" value="1">
+                                    <label class="form-check-label" for="everMarriedYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                                        id="everMarried" value="0" checked>
 
-                                <select class="custom-select mr-sm-2" id="smokingStatusInput" required>
-                                    <option value="">Choose...</option>
-
-                                    <option value="0">Never Smoked</option>
-                                    <option value="1">Former Smoker</option>
-                                    <option value="2">Currently Smoke</option>
-                                </select>
+                                    <label class="form-check-label" for="everMarriedNo">No</label>
+                                </div>
                             </div>
                         </div>
-                        <!-- residence type input here -->
-                        <div class="form-row align-items-center">
-                            <div class="col-auto my-1">
-                                <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
+                    </div>
+                    <!-- smoking status input here -->
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Smoking Status:</label>
 
-                                <select class="custom-select mr-sm-2" id="residenceTypeInput" required>
-                                    <option value="">Choose...</option>
+                            <select class="custom-select mr-sm-2" id="smokingStatusInput" required>
+                                <option value="">Choose...</option>
 
-                                    <option value="0">Urban</option>
-                                    <option value="1">Rural</option>
-                                </select>
-                            </div>
+                                <option value="0">Never Smoked</option>
+                                <option value="1">Former Smoker</option>
+                                <option value="2">Currently Smoke</option>
+                            </select>
                         </div>
-                        <!-- work type input here -->
-                        <div class="form-row align-items-center">
-                            <div class="col-auto my-1">
-                                <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
+                    </div>
+                    <!-- residence type input here -->
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
 
-                                <select class="custom-select mr-sm-2" id="workTypeInput" required>
-                                    <option value="">Choose...</option>
+                            <select class="custom-select mr-sm-2" id="residenceTypeInput" required>
+                                <option value="">Choose...</option>
 
-                                    <option value="0">Private</option>
-                                    <option value="1">Self-Employed</option>
-                                    <option value="2">Child</option>
-                                    <option value="3">Government</option>
-                                    <option value="4">Never Worked</option>
-                                </select>
-                            </div>
+                                <option value="0">Urban</option>
+                                <option value="1">Rural</option>
+                            </select>
                         </div>
-                        <!-- age, bmi, glucose input -->
-                        <div class="form-row">
-                            <!-- age input -->
-                            <div class="form-group col-md-3">
-                                <label for="ageInput">Age:</label>
+                    </div>
+                    <!-- work type input here -->
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1">
+                            <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
 
-                                <input type="text" class="form-control" id="ageInput" required>
+                            <select class="custom-select mr-sm-2" id="workTypeInput" required>
+                                <option value="">Choose...</option>
 
-                            </div>
-                            <!-- bmi input -->
-                            <div class="form-group col-md-3">
-                                <label for="bmiInput">BMI:</label>
+                                <option value="0">Private</option>
+                                <option value="1">Self-Employed</option>
+                                <option value="2">Child</option>
+                                <option value="3">Government</option>
+                                <option value="4">Never Worked</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- age, bmi, glucose input -->
+                    <div class="form-row">
+                        <!-- age input -->
+                        <div class="form-group col-md-3">
+                            <label for="ageInput">Age:</label>
 
-                                <input type="text" class="form-control" id="bmiInput" required>
+                            <input type="text" class="form-control" id="ageInput" required>
 
-                            </div>
-                            <!-- glucose input -->
-                            <div class="form-group col-md-3">
-                                <label for="glucoseInput">Glucose Level:</label>
+                        </div>
+                        <!-- bmi input -->
+                        <div class="form-group col-md-3">
+                            <label for="bmiInput">BMI:</label>
 
-                                <input type="text" class="form-control" id="glucoseInput" required>
+                            <input type="text" class="form-control" id="bmiInput" required>
 
-                            </div>
-                        </div> <!-- close age, bmi, glucose input -->
-                        <center><button class="btn btn-primary" id="predictorButton" type="submit">Submit Form</button>
-                        </center>
+                        </div>
+                        <!-- glucose input -->
+                        <div class="form-group col-md-3">
+                            <label for="glucoseInput">Glucose Level:</label>
+
+                            <input type="text" class="form-control" id="glucoseInput" required>
+
+                        </div>
+                    </div> <!-- close age, bmi, glucose input -->
+                    <center><button class="btn btn-primary" id="predictorButton" type="submit">Submit Form</button>
+                    </center>
                     </form>
                 </div> <!-- close form -->
             </div> <!-- close where our input form will be -->
@@ -223,9 +240,11 @@
     <div class="col-lg-12">
         <!-- possible output gif of results here -->
         <br><br>
-        <center><h3>Prediction Results:</h3></center>
+        <center>
+            <h3>Prediction Results:</h3>
+        </center>
         <br><br>
-        <center>{{ prediction_text }}</center>
+        <!-- <center>{{ prediction_text }}</center> -->
     </div>
     </div>
 
