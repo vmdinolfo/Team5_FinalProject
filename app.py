@@ -48,8 +48,15 @@ def data():
      webpage = render_template("data.html")
      return webpage
 
-@app.route("/stroke_predictor")
+@app.route('/stroke_predictor', methods = ['POST'])
 def stroke_predictor():
+
+    
+     prediction_labels = ['No Stroke', 'Stroke']
+
+     stroke_features_init = [float(x) for x in request.form.values()]
+     print(len(stroke_features_init))
+     print(stroke_features)
 
      webpage = render_template("stroke_predictor.html")
      return webpage
