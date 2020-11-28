@@ -24,7 +24,9 @@
     <!-- nav bar -->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
             <a class="navbar-brand" href="/index">Stroke Prediction</a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,6 +38,7 @@
                         Info
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
                         <a class="dropdown-item" href="/charts">Charts</a>
                         <a class="dropdown-item" href="/data">Data</a>
                         <a class="dropdown-item" href="/about">About Us</a>
@@ -43,6 +46,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/stroke_predictor">Stroke Predictor</a>
+
                 </li>
             </ul>
         </nav>
@@ -90,7 +94,9 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
-                                            id="hypertension" value="0">
+
+                                            id="hypertension" value="0" checked>
+
                                         <label class="form-check-label" for="hypertension">No</label>
                                     </div>
                                 </div>
@@ -109,7 +115,9 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-                                            id="heartDisease" value="0">
+
+                                            id="heartDisease" value="0" checked>
+
                                         <label class="form-check-label" for="heartDiseaseNo">No</label>
                                     </div>
                                 </div>
@@ -127,7 +135,9 @@
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
-                                            id="everMarried" value="0">
+
+                                            id="everMarried" value="0" checked>
+
                                         <label class="form-check-label" for="everMarriedNo">No</label>
                                     </div>
                                 </div>
@@ -137,8 +147,10 @@
                         <div class="form-row align-items-center">
                             <div class="col-auto my-1">
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Smoking Status:</label>
-                                <select class="custom-select mr-sm-2" id="smokingStatusInput">
-                                    <option selected>Choose...</option>
+
+                                <select class="custom-select mr-sm-2" id="smokingStatusInput" required>
+                                    <option value="">Choose...</option>
+
                                     <option value="0">Never Smoked</option>
                                     <option value="1">Former Smoker</option>
                                     <option value="2">Currently Smoke</option>
@@ -149,8 +161,10 @@
                         <div class="form-row align-items-center">
                             <div class="col-auto my-1">
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
-                                <select class="custom-select mr-sm-2" id="residenceTypeInput">
-                                    <option selected>Choose...</option>
+
+                                <select class="custom-select mr-sm-2" id="residenceTypeInput" required>
+                                    <option value="">Choose...</option>
+
                                     <option value="0">Urban</option>
                                     <option value="1">Rural</option>
                                 </select>
@@ -160,8 +174,10 @@
                         <div class="form-row align-items-center">
                             <div class="col-auto my-1">
                                 <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
-                                <select class="custom-select mr-sm-2" id="workTypeInput">
-                                    <option selected>Choose...</option>
+
+                                <select class="custom-select mr-sm-2" id="workTypeInput" required>
+                                    <option value="">Choose...</option>
+
                                     <option value="0">Private</option>
                                     <option value="1">Self-Employed</option>
                                     <option value="2">Child</option>
@@ -175,17 +191,23 @@
                             <!-- age input -->
                             <div class="form-group col-md-3">
                                 <label for="ageInput">Age:</label>
-                                <input type="text" class="form-control" id="ageInput">
+
+                                <input type="text" class="form-control" id="ageInput" required>
+
                             </div>
                             <!-- bmi input -->
                             <div class="form-group col-md-3">
                                 <label for="bmiInput">BMI:</label>
-                                <input type="text" class="form-control" id="bmiInput">
+
+                                <input type="text" class="form-control" id="bmiInput" required>
+
                             </div>
                             <!-- glucose input -->
                             <div class="form-group col-md-3">
                                 <label for="glucoseInput">Glucose Level:</label>
-                                <input type="text" class="form-control" id="glucoseInput">
+
+                                <input type="text" class="form-control" id="glucoseInput" required>
+
                             </div>
                         </div> <!-- close age, bmi, glucose input -->
                         <center><button class="btn btn-primary" id="predictorButton" type="submit">Submit Form</button>
