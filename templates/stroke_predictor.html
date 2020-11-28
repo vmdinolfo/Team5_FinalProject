@@ -77,7 +77,8 @@
                 <br>
                 <!-- enter form here -->
                 <div class="form-group">
-                    <form id="form">
+                    <!-- input section using form and post method from TA Farshad's example -->
+                    <form id="form" action ="{{url_for('predict')}}"method= "post">
                         <!-- hypertension input here -->
                         <div class="row">
                             <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
@@ -197,8 +198,12 @@
     </div>
     </div>
     <!-- col 9 through 12 -->
-    <div class="col-lg-4">
+    <div class="col-lg-12">
         <!-- possible output gif of results here -->
+        <br><br>
+        <center><h3>Prediction Results:</h3></center>
+        <br><br>
+        <center>{{ prediction_text }}</center>
     </div>
     </div>
 
