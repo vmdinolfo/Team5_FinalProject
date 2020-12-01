@@ -1,2 +1,15 @@
 # Team5_FinalProject
-Repo to host the final ML project
+
+# Do you know your stroke risk?
+
+Source of the data: https://www.sciencedirect.com/science/article/pii/S0933365719302295?via%3Dihub
+Liu, Tianyu; Fan, Wenhui; Wu, Cheng (2019), “Data for: A hybrid machine learning approach to cerebral stroke prediction based on imbalanced medical-datasets”, Mendeley Data, V1, doi: 10.17632/x8ygrw87jw.1
+
+The medical dataset contains 43,400 records of potential patients which includes 783 occurrences of stroke. 
+
+Cerebral stroke has become a significant global public health issue. The ideal solution to this concern is to prevent in advance by controlling related metabolic factors. However, it is difficult for medical staff to decide whether special precautions are needed for a potential patient only based on the monitoring of physiological indicators unless they are obviously abnormal. This project builds a machine learning model to predict whether someone is at risk of having a stroke.
+
+The data in each row includes numerical factors, such as age and average glucose levels, and categorical factors, such as "has heart disease" (yes or no), work type, and smoking status. This is not an exhaustive list. We use this data to determine which factors contribute to having a stroke, and among those which hold the most weight.
+
+### Data Dictionary
+![image.png](attachment:image.png)
