@@ -25,7 +25,7 @@
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="/index">Stroke Prediction</a>
+            <a class="navbar-brand" href="/">Stroke Prediction</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,93 +52,127 @@
         </nav>
     </div>
 
-    <div class = "ML_inputs">
-        <h1> Stroke</h1>
-          <h3> Enter following to predict stroke risk</h3>
-      
-          <!-- Input section using form and post method -->
-          <form action ="{{url_for('strokePredictorData')}}"method= "post">
 
-            <!-- *********************************** -->
-            <div class="form-check" id="gender">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptionsG"
-                        id="gender" value="1">
-                    <label class="form-check-label" for="gender">Male</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptionsG"
-                        id="gender" value="0" checked>
-                    <label class="form-check-label" for="gender">Female</label>
-                </div>
+    <!-- first container -->
+    <div class="container">
+        <!-- row #1 -->
+        <div class="row">
+            <!-- col 1 through 2 -->
+            <div class="col-lg-2">
             </div>
-            <!-- ****************************************** -->
-
-            <!-- ***************************************************** -->
-            <!-- hypertension input here -->
-            <div class="row">
-                <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
-                <div class="col-sm-8">
-                    <div class="form-check" id="hypertension">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
-                                id="hypertension" value="1">
-                            <label class="form-check-label" for="hypertension">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
-                                id="hypertension" value="0" checked>
-                            <label class="form-check-label" for="hypertension">No</label>
-                        </div>
-                    </div>
-                </div>
+            <!-- col 3 through 10 -->
+            <div class="col-lg-8">
+                <div class="ML_inputs"></div>
+                <br><br>
+                <center>
+                    <h1>Stroke Predictor</h1>
+                </center>
+                <br><br>
             </div>
-    <!-- ********************************************************** -->
-
-    <!-- ************************************************************ -->
-            <!-- heart disease input here -->
-            <div class="row">
-                <legend class="col-form-label col-sm-4 pt-0">Heart Disease:</legend>
-                <div class="col-sm-8">
-                    <div class="form-check" id="heartDisease">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-                                id="heartDisease" value="1">
-                            <label class="form-check-label" for="heartDisease">Yes</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
-                                id="heartDisease" value="0" checked>
-
-                            <label class="form-check-label" for="heartDiseaseNo">No</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    <!-- ***************************************************** -->
-
-    <!-- ever married input here -->
-    <div class="row">
-        <legend class="col-form-label col-sm-4 pt-0">Ever Married:</legend>
-        <div class="col-sm-8">
-            <div class="form-check" id="everMarried">
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
-                        id="everMarried" value="1">
-                    <label class="form-check-label" for="everMarriedYes">Yes</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
-                        id="everMarried" value="0" checked>
-
-                    <label class="form-check-label" for="everMarriedNo">No</label>
-                </div>
+            <!-- col 11 through 12 -->
+            <div class="col-lg-2">
             </div>
         </div>
-    </div>
+        <!-- row #2 -->
+        <div class="row">
+            <!-- col 1 -->
+            <div class="col-lg-1">
+            </div>
+            <!-- col 2 through 11-->
+            <!-- where our input form will be -->
+            <div class="col-lg-10">
+                <p>
+                    <center>Fill in your details below and click <strong>Submit Form</strong> to determine your
+                        prediction.</center>
+                </p>
+                <br>
+                <!-- Input section using form and post method -->
+                <form action="{{url_for('strokePredictorData')}}" method="post" class="form">
 
-    <!-- ************************************************** -->
-            <legend class="col-form-label col-sm-4 pt-0">Smoke Status:</legend>
+                    <!-- gender input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Gender:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="gender">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsG" id="gender"
+                                        value="1">
+                                    <label class="form-check-label" for="gender">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsG" id="gender"
+                                        value="0" checked>
+                                    <label class="form-check-label" for="gender">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- hypertension input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Hypertension:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="hypertension">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                                        id="hypertension" value="1">
+                                    <label class="form-check-label" for="hypertension">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHT"
+                                        id="hypertension" value="0" checked>
+                                    <label class="form-check-label" for="hypertension">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- heart disease input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Heart Disease:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="heartDisease">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
+                                        id="heartDisease" value="1">
+                                    <label class="form-check-label" for="heartDisease">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsHD"
+                                        id="heartDisease" value="0" checked>
+
+                                    <label class="form-check-label" for="heartDiseaseNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- ever married input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Ever Married:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="everMarried">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                                        id="everMarried" value="1">
+                                    <label class="form-check-label" for="everMarriedYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsEM"
+                                        id="everMarried" value="0" checked>
+
+                                    <label class="form-check-label" for="everMarriedNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- smoking status input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Smoking Status:</legend>
                         <div class="col-sm-8">
                             <div class="form-check" id="SmokeStatus">
                                 <div class="form-check form-check-inline">
@@ -158,109 +192,117 @@
                                 </div>
                             </div>
                         </div>
-                    
-            <!-- ***************************************** -->
 
-            <!-- ************************************************* -->
-         <!-- residence type input here -->
-         <div class="form-row align-items-center">
-            <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Residence Type:</label>
-                <div class="col-sm-8">
-                    <div class="form-check" id="ResidenceStatus">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsRES"
-                                id="residence" value="0">
-                            <label class="form-check-label" for="Urban">Urban</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsRES"
-                                id="residence" value="1" checked>
-                            <label class="form-check-label" for="Rural">Rural</label>
+                    </div>
+
+
+                    <!-- residence type input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Residence Type:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="ResidenceStatus">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsRES"
+                                        id="residence" value="0">
+                                    <label class="form-check-label" for="Urban">Urban</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsRES"
+                                        id="residence" value="1" checked>
+                                    <label class="form-check-label" for="Rural">Rural</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- ************************************************************* -->
-        <!-- work type input here -->
-        <div class="form-row align-items-center">
-            <div class="col-auto my-1">
-                <label class="mr-sm-2" for="inlineFormCustomSelect">Work Type:</label>
-                <div class="col-sm-8">
-                    <div class="form-check" id="workType">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR"
-                                id="work" value="0">
-                            <label class="form-check-label" for="Private">Private</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR"
-                                id="work" value="1" checked>
-                            <label class="form-check-label" for="Self">Self-Employed</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR"
-                                id="work" value="2" checked>
-                            <label class="form-check-label" for="Child">Child</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR"
-                                id="work" value="3" checked>
-                            <label class="form-check-label" for="Gov">Government</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR"
-                                id="work" value="4" checked>
-                            <label class="form-check-label" for="Never">Never Worked</label>
+
+
+                    <!-- work type input here -->
+                    <div class="row">
+                        <legend class="col-form-label col-sm-4 pt-0">Work Type:</legend>
+                        <div class="col-sm-8">
+                            <div class="form-check" id="workType">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR" id="work"
+                                        value="0">
+                                    <label class="form-check-label" for="Private">Private</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR" id="work"
+                                        value="1" checked>
+                                    <label class="form-check-label" for="Self">Self-Employed</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR" id="work"
+                                        value="2" checked>
+                                    <label class="form-check-label" for="Child">Child</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR" id="work"
+                                        value="3" checked>
+                                    <label class="form-check-label" for="Gov">Government</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptionsWOR" id="work"
+                                        value="4" checked>
+                                    <label class="form-check-label" for="Never">Never Worked</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-<!-- **************************************************************************************** -->
 
-<!-- *********************************************************************** -->
-<!-- age, bmi, glucose input -->
-    <div class="form-row">
-        
-        <!-- age input -->
-        <div class="form-group col-md-3">
-            <label for="ageInput">Age:</label>
-            <input type="text" name = "Age" placeholder = "Age" class="form-control" id="ageInput" required = "required" />
-            
-        </div>
-        
-        <!-- bmi input -->
-        <div class="form-group col-md-3">
-            <label for="bmiInput">BMI:</label>
-            <input type="text" name = "BMI" placeholder = "BMI" class="form-control" id="bmiInput" required = "required" />
-        </div>
 
-        <!-- glucose input -->
-        <div class="form-group col-md-3">
-            <label for="glucoseInput">Glucose Level:</label>
-            <input type="text" name = "glucose" placeholder = "glucose" class="form-control" id="glucoseInput" required>
-        </div>
 
-    </div> <!-- close age, bmi, glucose input -->
-      
-        <!-- <button type ="submit" class ="btn"> Predict</button> -->
+                    <!-- age, bmi, glucose input -->
+                    <br>
+                    <div class="form-row">
 
-        <center><button class="btn btn-primary" id="predictorButton" type="submit">Submit Form</button>
+                        <!-- age input -->
+                        <div class="form-group col-md-4">
+                            <label for="ageInput">Age:</label>
+                            <input type="text" name="Age" placeholder="Age" class="form-control" id="ageInput"
+                                required="required" />
+
+                        </div>
+
+                        <!-- bmi input -->
+                        <div class="form-group col-md-4">
+                            <label for="bmiInput">BMI:</label>
+                            <input type="text" name="BMI" placeholder="BMI" class="form-control" id="bmiInput"
+                                required="required" />
+                        </div>
+
+                        <!-- glucose input -->
+                        <div class="form-group col-md-4">
+                            <label for="glucoseInput">Glucose Level:</label>
+                            <input type="text" name="glucose" placeholder="glucose" class="form-control"
+                                id="glucoseInput" required>
+                        </div>
+
+                    </div> <!-- close age, bmi, glucose input -->
+
+                    <!-- <button type ="submit" class ="btn"> Predict</button> -->
+
+                    <center><button class="btn btn-primary" id="predictorButton" type="submit">Submit Form</button>
+                    </center>
+                </form> <!-- close form -->
+            </div> <!-- close col-10 -->
+        </div> <!-- close row 2 -->
+    </div> <!-- close container -->
+    <!-- col 9 through 12 -->
+    <div class="col-lg-12">
+        <!-- possible output gif of results here -->
+        <br><br>
+        <center>
+            <h3>Prediction Results:</h3>
         </center>
-    </form>
-      
-          <br>
-          <br>
-          {{ prediction_text }}
-      </div>
-    
-        
-          
+        <br><br>
+        <center>{{ prediction_text }}</center>
+    </div>
 
-  
+
+
+
+
 
 
 
