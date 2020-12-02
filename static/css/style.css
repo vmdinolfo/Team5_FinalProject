@@ -23,4 +23,10 @@ form {
 
 img {
     margin-left: 2px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.chart-info {
+    margin-left: 250px;
 }
