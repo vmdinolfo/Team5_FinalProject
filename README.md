@@ -7,6 +7,8 @@
 
 ## Project Description
 
+#### Stroke Prediction and Analysis
+
 Source of the data: https://www.sciencedirect.com/science/article/pii/S0933365719302295?via%3Dihub
 Liu, Tianyu; Fan, Wenhui; Wu, Cheng (2019), “Data for: A hybrid machine learning approach to cerebral stroke prediction based on imbalanced medical-datasets”, Mendeley Data, V1, doi: 10.17632/x8ygrw87jw.1
 
