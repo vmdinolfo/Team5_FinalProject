@@ -21,7 +21,7 @@ In this project we examined 43,400 rows of data pertaining to individuals, in or
 ### Data Dictionary
 ![](/static/images/data_dictionary.png)
 
-### Machine Learning Technologies
+### Machine Learning Technologies - Five models were compared to maximize stroke detection and minimize false alarm using Sklearn
 1. Logistic Regression - Classify things as 1 vs. 0, yes vs. no, sick vs. well, cat vs. no cat, good credit risk vs. bad, etc.
 2. Decision Trees & Random Forests - Classify things (as above).
 3. K Nearest Neighbors (KNN) - Classify things (as above).
