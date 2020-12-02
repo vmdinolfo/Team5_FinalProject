@@ -1,5 +1,7 @@
 # Do you know your stroke risk?
 
+> 📌 DISCLAIMER: This notebook is used for demonstrative and illustrative purposes only and does not constitute an offering that has gone through regulatory review. It is not intended to serve as a medical application. There is no representation as to the accuracy of the output of this application and it is presented without warranty.
+
 Team 5: Jeff Brown, Vincent Dinolfo, Emily Frels, Jeanine Vincent
 
 ## Project Description
@@ -11,7 +13,7 @@ The medical dataset contains 43,400 records of potential patients which includes
 
 Cerebral stroke has become a significant global public health issue. The ideal solution to this concern is to prevent in advance by controlling related metabolic factors. However, it is difficult for medical staff to decide whether special precautions are needed for a potential patient only based on the monitoring of physiological indicators unless they are obviously abnormal. This project builds a machine learning model to predict whether someone is at risk of having a stroke.
 
-In this project we examine 43,400 rows of data pertaining to individuals, in order to build a machine learning model to predict whether someone is at risk of having a stroke. The data in each row includes numerical factors, such as age, average glucose levels and BMI (body mass index), and categorical factors, such as "has hypertension" (yes or no), "has heart disease" (yes or no), ever married, work type, and smoking status. We use this data to determine which factors contribute to having a stroke, and among those which hold the most weight.
+In this project we examined 43,400 rows of data pertaining to individuals, in order to build a machine learning model to predict whether someone is at risk of having a stroke. The data in each row includes numerical factors, such as age, average glucose levels and BMI (body mass index), and categorical factors, such as "has hypertension" (yes or no), "has heart disease" (yes or no), ever married, work type, and smoking status. We use this data to determine which factors contribute to having a stroke, and among those which hold the most weight.
 
 ### Data Dictionary
 ![](/static/images/data_dictionary.png)
