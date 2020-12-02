@@ -1,6 +1,6 @@
 # Do you know your stroke risk?
 
-Team 5: Jeff Brown, Emily Frels, Jeanine Vincent
+Team 5: Jeff Brown, Vincent Dinolfo, Emily Frels, Jeanine Vincent
 
 ## Project Description
 
@@ -16,8 +16,15 @@ In this project we examine 43,400 rows of data pertaining to individuals, in ord
 ### Data Dictionary
 ![](/static/images/data_dictionary.png)
 
-After building and exporting our machine learning model, we build a Python Flask app to produce an HTML page embedded with JavaScript. The HTML page offers a form for users to enter their own information into, while the JavaScript reads the results from Flask and writes the results to the page accordingly.
+### Machine Learning Technologies
+1. Logistic Regression - Classify things as 1 vs. 0, yes vs. no, sick vs. well, cat vs. no cat, good credit risk vs. bad, etc.
+2. Decision Trees & Random Forests - Classify things (as above).
+3. K Nearest Neighbors (KNN) - Classify things (as above).
+4. Support Vector Machines (SVM) - Classify things (as above).
+5. Neural Networks / Deep Learning - A super powerful universal classifier. Quick recipe: properly scale, normalize, and encode your inputs/features (pd.get_dummies()) and your outputs/labels (to_categorical()); assign each column in your input array, X, to an input of your neural network; define a hidden layer with, say, three times as many nodes as you have input nodes; use an optional hidden layer(s) if you want; define one output node for each category you wish to detect; e.g., yes vs. no will have two output nodes; iris-setosa vs. iris-virginica vs. iris-versicolour will have three output nodes. Use a ReLU activation function on your hidden layers, and a softmax on your outputs. Tweak as desired or necessary.
 
+
+After building and exporting our machine learning model, we build a Python Flask app to produce an HTML page embedded with JavaScript. The HTML page offers a form for users to enter their own information into, while the JavaScript reads the results from Flask and writes the results to the page accordingly.
 
 ## Project Website
 Heroku App location: https://
