@@ -14,7 +14,7 @@ The data in each row includes numerical factors, such as age and average glucose
 ### Data Dictionary
 ![](/static/images/data_dictionary.png)
 
-In this project we examine 43,400 rows of data pertaining to individuals, in order to build a machine learning model to predict whether someone is at risk of having a stroke. The data in each row includes numerical factors, such as age and average glucose levels, and categorical factors, such as "has heart disease" (yes or no), work type, and smoking status. This is not an exhaustive list. We use this data to determine which factors contribute to having a stroke, and among those which hold the most weight.
+In this project we examine 43,400 rows of data pertaining to individuals, in order to build a machine learning model to predict whether someone is at risk of having a stroke. The data in each row includes numerical factors, such as age, average glucose levels and BMI (body mass index), and categorical factors, such as "has heart disease" (yes or no), "has hypertension" (yes or no), ever married, work type, and smoking status. We use this data to determine which factors contribute to having a stroke, and among those which hold the most weight.
 
 After building and exporting our machine learning model, we build a Python Flask app to produce an HTML page embedded with JavaScript. The HTML page offers a form for users to enter their own information into, while the JavaScript reads the results from Flask and writes the results to the page accordingly.
 
