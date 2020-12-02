@@ -28,4 +28,10 @@ img {
 
 .chart-info {
     margin-left: 250px;
+    margin-right: 250px;
+}
+
+#prediction {
+    font-size: 30px;
+    font-style: oblique;
 }
