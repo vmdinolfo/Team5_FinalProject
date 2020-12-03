@@ -7,6 +7,7 @@ from flask import render_template
 from flask import jsonify
 from flask import json
 from flask import request
+from sklearn.neighbors import KNeighborsClassifier
 import joblib
 
 
@@ -45,18 +46,26 @@ def charts():
      webpage = render_template("charts.html")
      return webpage
 
-# data route shows charting from raw data
+
+# mlm route shows info about Machine Learning Models
 @app.route("/mlm")
-def data():
+def mlm():
 
      webpage = render_template("mlm.html")
+     return webpage
+
+# data route shows charting from raw data
+@app.route("/resources")
+def resources():
+
+     webpage = render_template("resources.html")
      return webpage
 
 #stroke predictor route allows input of health to predict stroke risk
 @app.route("/strokePredictor")
 def strokePredictor():
-
-     webpage = render_template("strokePredictor.html")
+     
+     webpage = render_template("strokePredictor.html", bunny_link = '/static/blank_default.png')
      return webpage
 
 #strokePredictorData route is used to transfer data from form on strokePredictor page and transfer back result using Jinja
@@ -72,7 +81,26 @@ def strokePredictorData():
      print(stroke_features_init) #printing original list of elements
      print(stroke_features_order) #printing newly ordered list
 
-     webpage = render_template("strokePredictor.html", prediction_text = "hello") #returning desired result to strokePredictor page
+     features = [stroke_features_order]
+     model = joblib.load('knn_model.sav')
+     result = model.predict(features)
+
+     if result == [0]:
+          printed_result = 'No Risk of Stroke'
+     elif result == [1]:
+          printed_result = 'Risk of Stroke'
+     else:
+          printed_result = 'ERROR: Fill out all forms for stroke prediction'
+
+     
+     if printed_result == 'No Risk of Stroke':
+          gif = '/static/happy_bunny.gif'
+     elif printed_result == 'Risk of Stroke':
+          gif = '/static/sad_bunny.png'
+     else:
+          gif = '/static/blank_default.png'
+
+     webpage = render_template("strokePredictor.html", prediction_text = printed_result, bunny_link = gif) #returning desired result to strokePredictor page
      return webpage
 
 #run the app
