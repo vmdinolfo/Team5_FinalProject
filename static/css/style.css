@@ -23,6 +23,14 @@ form {
 
 img {
     margin-left: 2px;
+
+}
+.row_img {
+    
+    background-color: #E9E6E6;
+    border-radius: 5px;
+}
+
     border-radius: 5px;
 }
 
@@ -35,3 +43,4 @@ img {
     font-size: 30px;
     font-style: oblique;
 }
+

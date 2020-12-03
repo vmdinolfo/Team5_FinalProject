@@ -46,9 +46,10 @@ def charts():
      webpage = render_template("charts.html")
      return webpage
 
+
 # mlm route shows info about Machine Learning Models
 @app.route("/mlm")
-def data():
+def mlm():
 
      webpage = render_template("mlm.html")
      return webpage
