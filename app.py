@@ -46,10 +46,10 @@ def charts():
      return webpage
 
 # data route shows charting from raw data
-@app.route("/MLM")
+@app.route("/mlm")
 def data():
 
-     webpage = render_template("MLM.html")
+     webpage = render_template("mlm.html")
      return webpage
 
 #stroke predictor route allows input of health to predict stroke risk

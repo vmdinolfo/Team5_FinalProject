@@ -52,24 +52,144 @@
         </nav>
     </div>
 
-    <!-- first container -->
-    <div class="container">
+     <!-- first container -->
+     <div class="container">
         <!-- row #1 -->
         <div class="row">
             <!-- col 1 through 3 -->
-            <div class="col-lg-3">
+            <div class="col-lg-2">
             </div>
             <!-- col 4 through 9 -->
-            <div class="col-lg-6">
+            <div class="col-lg-8">
                 <br><br>
-                <h1>Data Table TBD</h1>
+                <h1>
+                    <center>Machine Learning Models for Predicting Risk of Stroke</center>
+                </h1>
+                <br>
+                <br>
+                <p> Researchers have made available a dataset which provides an individuals health information and 
+                    whether or not the individual had suffered a stroke.  The data set can be found at: <br>
+
+                    <p style = "font-size: small">Liu, Tianyu; Fan, Wenhui; Wu, Cheng (2019), “Data for: A hybrid machine learning approach to cerebral 
+                    stroke prediction based on imbalanced medical-datasets”, Mendeley Data, V1, doi: 10.17632/x8ygrw87jw.1 </p>
+                    <br>
+                    The data set contains the following information on the individuals:<br><br>
+
+                    <ul>
+                        <li>Gender</li>
+                        <li>Age</li>
+                        <li>Hypertension (Y/N)</li>
+                        <li>Heart Disease (Y/N)</li>
+                        <li>Marital Status</li>
+                        <li>Work Status</li>
+                        <li>Residence Type (Urban/Rural)</li>
+                        <li>Glucose Level</li>
+                        <li>BMI</li>
+                        <li>Smoking Status</li>
+                    </ul>
+
+                    Using this data is it possible to create a model that predicts ones risk of stroke-symptoms?  Several machine
+                    learning models were used in an attempt to find a suitable solution: <br><br>
+
+                    <ul>
+                        <li>Decision Tree</li>
+                        <li>Random Forest</li>
+                        <li>Logistic Regression</li>
+                        <li>k Nearest Neighbor (KNN)</li>
+                        <li>Neural Network</li>
+                    </ul>
+
+                    Initially all models failed to find an acceptable model based on three metrics:
+                <div class="row">
+                    <!-- <div class="col-lg-2"></div> -->
+                   <div class = "row_img">
+                        <div class="col-lg-8">
+                            <center>
+                                <br>
+                                <img class="img-responsive" style="width: auto; height: 35px" src = "/static/images/precision.png" alt = "precision_def"/>
+                                <p style = "font-size: small"> Precision is ratio of correctly predicted results to the total predicted positive observations</p>
+                                <img class="img-responsive" style="width: auto; height: 30px" src = "/static/images/recall.png" alt = "recall_def"/>
+                                <p style = "font-size: small"> Recall is ratio of correctly predicted results to the total positive predicted cases</p>
+                                <img class="img-responsive" style="width: auto; height: 40px" src = "/static/images/f1.png" alt = "f1_def"  />
+                              
+                                <p style = "font-size: small"> F1 is the harmonic average of the precision and recall</p>
+                                <br>
+                                <p>Where TP = True Positive; FP = False Positive; FN = False Negatives. </p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                 
+                    <br><br>
+
+                    <p>Why were the machine models not able to give good results?  Reviewing the data showed the data was highly imbalanced.  The number
+                        of people who had strokes in the dataset was 548.  The number who did not have stroke was 28,524.  Therefore the data set was strongly
+                        skewed to people who did not have strokes.  This affects the metrics for the model. As an example assume a model has an accuracy of 95% for both
+                        people with stroke and people without stroke.  This is a good result.  If we fix the population size for non-stroke at 20,000 and vary the 
+                        number of people who had stroke, how would this affect the precision and recall?  This is shown in the Figure below.
+                    </p>
+               <figure class = "figure">
+                   <img src = "\static\images\precision_recall_model.png" class="figure-img img-fluid rounded" alt = "effect of positive counts on precision and recall">
+                  <center> <figcaption class = "figure-caption">Effect of positive counts on recall and precision</figcaption>
+                  </center>
+                </figure>
+                    <p>The analysis shown in the plot uses a fixed negative stroke count of 20,000.  The positive stroke count is varied in the calculation.  While
+                        the recall remains constant, the precision is seen to decrease as positive stroke count decreases.  This is because even though the accuracy is 95% the 
+                        number of false positives is high (5% of 20,000 or 1000 counts) relative to the the lower counts of positive strokes (as an example for 500 positive strokes
+                        5% is 25 false negatives which gives a precision of 25/1025 = 24%). Therefore an alternative approach is required in order to properly analyze imbalanced data.
+                    </p>
+                    <br><br>
+                    <h2>Enter SMOTE</h2>
+                    <p>In an imbalanced classification data set there is generally too few examples in the smaller population for a model to effectively learn the boundary between pass and fails.
+                        A solution to this problem is to oversample the data points in the minority class.  The most widely adopted method for doing this is the Synthetic Minority Oversampling Technique,
+                        commonly referred to as SMOTE.  This approach was documented by Chawla in the 2002 paper:
+
+                        <p style = "font-size: small"> Chawla et al, "SMOTE: Synthetic Minority Over-sampling Technique"; Journal of AI Research, 16, 321, 2002</p>
+                        
+                        In simple terms, SMOTE selects examples that are close in the feature space, drawing a line between them and drawing a new sample at a point along 
+                        the line.  A good question is "does this process not change the data?".  The approach is effective because the points generated are based on the known data points.  Therefore the 
+                        generated data is plausible.  
+
+                        As an example, a sample of data was taken from the stroke data set: 200 examples of no stroke and 50 examples of stroke.  The participants age and average glucose level are 
+                        plotted in the figure below.  Individual who suffered a stroke are shown in red and those who had not suffered a stroke are shown in blue. Also shown for comparison is an example from 
+                        the same data set but the data for those who suffered stroke has been over-sampled using a SMOTE technique from the imblearn python module.</p>
+                <center>
+                <figure class = "figure">
+                    <img src = "\static\images\data_before_smote.png" class="figure-img img-fluid rounded" alt = "data distribution before oversampling">
+                    <center> <figcaption class = "figure-caption">Glucose Level vs Age for 200 People Without Stroke and 50 Who Suffered from a Stroke</figcaption>
+                    </center>
+                </figure>
+
+                <br>
+                <figure class = "figure">
+                    <img src = "\static\images\data_after_smote.png" class="figure-img img-fluid rounded" alt = "data distribution before oversampling">
+                    <center> <figcaption class = "figure-caption">Glucose Level vs Age for Same Data Set After Oversampling Data from Positive Stroke</figcaption>
+                    </center>
+                </figure>
+                </center>
+                <p> As can be seen by comparing the plots the oversampling populated the positive stroke data with points contained within the limits of the existing points but randomly distributed.</p>
+                <br>
             </div>
+            
+            <row>
+                <p>
+                    <br><br><br><br><br><br>
+                    References: 
+                    <ul>
+                        <li><a href="https://www.columbianeurology.org/neurology/staywell/history-stroke#:~:text=Hippocrates%2C%20the%20father%20of%20medicine,and%20change%20in%20well%2Dbeing.">Columbia University Department of Neurology</a></li>
+                        <li><a href="https://www.healthline.com/health/stroke/history-of-stroke">Healthline</a></li>
+                        <li><a href="https://www.stroke.org/en/about-stroke/stroke-symptoms?gclid=CjwKCAiA5IL-BRAzEiwA0lcWYkD0SaDni_FozKz_FJne89S2wKG2481mdz2cCDAwJN1iYDQR0-zA4BoCeYgQAvD_BwE">American Stroke Association</a></li>
+                    </ul>
+                </p>
+            </row>
             <!-- col 10 through 12 -->
-            <div class="col-lg-3">
+            <div class="col-lg-2">
             </div>
         </div>
 
     </div>
+
+
 
 
 
