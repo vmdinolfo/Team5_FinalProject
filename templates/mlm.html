@@ -151,7 +151,7 @@
                         
                         In simple terms, SMOTE selects examples that are close in the feature space, drawing a line between them and drawing a new sample at a point along 
                         the line.  A good question is "does this process not change the data?".  The approach is effective because the points generated are based on the known data points.  Therefore the 
-                        generated data is plausible.  
+                        generated data is plausible.  <br><br>
 
                         As an example, a sample of data was taken from the stroke data set: 200 examples of no stroke and 50 examples of stroke.  The participants age and average glucose level are 
                         plotted in the figure below.  Individual who suffered a stroke are shown in red and those who had not suffered a stroke are shown in blue. Also shown for comparison is an example from 
@@ -170,11 +170,123 @@
                     </center>
                 </figure>
                 </center>
-                <p> As can be seen by comparing the plots the oversampling populated the positive stroke data with points contained within the limits of the existing points but randomly distributed.</p>
+                <p> As can be seen by comparing the plots the oversampling populated the positive stroke data with points 
+                    contained within the limits of the existing points but randomly distributed.</p>
+                <p> Several models were run using both the data set as supplied (incomplete data elements removed) and after 
+                    oversampling using a SMOTE technique.  For each of these the metrics of accuracy, precision
+                    recall, and F1 were calculated to evaluate model performance.  The results are shown below:</p>
+                <div class="row">
+                    <div class = "data_table">
+                        <div class="col-lg-12">
+                            <table class = "table table-bordered table-responsive table-condensed", style = "width 100%">
+                                <caption style = "font-size: small"><center>Comparing Results Without and With OverSampling</center></caption>
+                                <center>
+                                <thead>
+                                <tr>
+                                    <th> Data Set </th>
+                                    <th> Machine Learn Model </th>
+                                    <th> Accuracy </th>
+                                    <th> Precision </th>
+                                    <th> Recall </th>
+                                    <th> F1 </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    
+                                    <td>Imbalanced</td>
+                                    <td>Random Forest</td>
+                                    <td>100%</td>
+                                    <td>100%</td>
+                                    <td>75%</td>
+                                    <td>86%</td>
+                                    
+                                </tr>
+                                <tr>
+                                    
+                                    <td>Imbalanced</td>
+                                    <td>Neural Network</td>
+                                    <td>98%</td>
+                                    <td>74%</td>
+                                    <td>12%</td>
+                                    <td>20%</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Imbalanced</td>
+                                    <td>KNN</td>
+                                    <td>98%</td>
+                                    <td>58%</td>
+                                    <td>1%</td>
+                                    <td>2%</td>
+                                </tr>
+                                <tr>
+                                    <td>Balanced (SMOTE)</td>
+                                    <td>Random Forest</td>
+                                    <td>99%</td>
+                                    <td>99%</td>
+                                    <td>100%</td>
+                                    <td>99%</td>
+                                </tr>
+                                <tr>
+                                    <td>Balanced (SMOTE)</td>
+                                    <td>Neural Network</td>
+                                    <td>95%</td>
+                                    <td>92%</td>
+                                    <td>98%</td>
+                                    <td>95%</td>
+                                </tr>
+                                <tr>
+                                    <td>Balanced (SMOTE)</td>
+                                    <td>KNN</td>
+                                    <td>93%</td>
+                                    <td>88%</td>
+                                    <td>99%</td>
+                                    <td>93%</td>
+                                </tr>
+                            </tbody>
+                            </center>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                <!-- col 1 through 3 -->
+                    <div class="col-lg-0"></div>
+                    <!-- col 4 through 9 -->
+                        <div class="col-lg-12">
+                            <br>
+                            <p> This data set shows the clear benefit of using a balanced data set.  It allows the performance of the models to be more accurately evaluated.  Several direct observations 
+                                can be made from the above data:</p>
+                                <ul>
+                                    <li>For Imbalanced data all models shown perform poorly, albeit differently.  The data is consistently skewed due to the False Positive Results driven from the larger
+                                        sample size of the no-stroke data set.
+                                    </li>
+                                    <li>By balancing the data both models perform very well across all metrics.
+                                    </li>
+                                    <li>Surprisingly the accuracy is higher for the Imbalanced data.  This shows how accuracy on its own is a misleading metric.  The result
+                                        is skewed because of the imbalanced data.  Essentially the models with imbalanced data do well predicting someone will not have a stroke.  This gives a high accuracy because
+                                        the data is so strongly skewed towards no-stroke conditions.
+                                    </li>
+                                </ul>
+                             <p> Using these models we can predict if one is at increased risk for stroke.  Go to the Stroke Predictor Page (link below), enter your information and the selected model will predict your risk of stroke.</p>
+                             
+                            <center></center><a class="nav-link" href="/strokePredictor">Stroke Predictor</a><center></center>
+                                     
+
+                        </div>
+                    
+                </div>
                 <br>
 
             </div>
             
+
+            <row>
+                <!-- add some references here if we want to. -->
+            </row>
+
             <!-- col 10 through 12 -->
             <div class="col-lg-2">
             </div>

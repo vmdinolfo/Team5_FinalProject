@@ -8,7 +8,23 @@ from flask import jsonify
 from flask import json
 from flask import request
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
 import joblib
+from tensorflow.keras.models import load_model
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import layers
+#tensorflow.keras.__version__
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+from sklearn.metrics import classification_report
+
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler, StandardScaler
+from sklearn.metrics import classification_report
+from joblib import dump, load
+from tensorflow.keras.utils import to_categorical
 
 
 #############################################################
@@ -72,7 +88,6 @@ def strokePredictor():
 @app.route('/strokePredictorData', methods = ['POST'])
 def strokePredictorData():
     
-   
      dataOrder = [0,7,1,2,3,6,5,9,8,4] #contains order of list required for machine learning model (different than form order)
      stroke_features_init = [float(x) for x in request.form.values()] #reading values from form
      
@@ -81,13 +96,28 @@ def strokePredictorData():
      print(stroke_features_init) #printing original list of elements
      print(stroke_features_order) #printing newly ordered list
 
+#KNN modeling
      features = [stroke_features_order]
-     model = joblib.load('knn_model.sav')
-     result = model.predict(features)
+     model_KNN = joblib.load('knn_model.sav')
+     result = model_KNN.predict(features)
 
-     if result == [0]:
+#Random Forest model
+     model_RF = joblib.load('RF_model.sav')
+     result_RF = model_RF.predict(features)
+
+#Neural Network Model
+     model_NN = load_model('NNM-SMOTE.h5')
+     NeuralNet_scaler = load('NN_minmaxscaler.bin')
+     features_scaled = NeuralNet_scaler.transform(features)
+     result_NN = model_NN.predict_classes(features_scaled)
+
+     print(f"KNN Model Result {result}")
+     print(f"RF Model Result {result_RF}")
+     print(f"NN Model Result {result_NN}")
+
+     if result_RF == [0]:
           printed_result = 'No Risk of Stroke'
-     elif result == [1]:
+     elif result_RF == [1]:
           printed_result = 'Risk of Stroke'
      else:
           printed_result = 'ERROR: Fill out all forms for stroke prediction'
