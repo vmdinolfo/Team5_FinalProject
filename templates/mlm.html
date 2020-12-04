@@ -260,17 +260,41 @@
                             <p> This data set shows the clear benefit of using a balanced data set.  It allows the performance of the models to be more accurately evaluated.  Several direct observations 
                                 can be made from the above data:</p>
                                 <ul>
-                                    <li>For Imbalanced data all models shown perform poorly, albeit differently.  The data is consistently skewed due to the False Positive Results driven from the larger
+                                    <li>For Imbalanced data all models perform poorly, albeit differently.  The data is consistently skewed due to the False Positive Results driven from the larger
                                         sample size of the no-stroke data set.
-                                    </li>
-                                    <li>By balancing the data both models perform very well across all metrics.
-                                    </li>
+                                    </li><br>
+                                    <li>By balancing the data all models show large improvements, performing well across all metrics.
+                                    </li><br>
                                     <li>Surprisingly the accuracy is higher for the Imbalanced data.  This shows how accuracy on its own is a misleading metric.  The result
                                         is skewed because of the imbalanced data.  Essentially the models with imbalanced data do well predicting someone will not have a stroke.  This gives a high accuracy because
                                         the data is so strongly skewed towards no-stroke conditions.
                                     </li>
                                 </ul>
-                             <p> Using these models we can predict if one is at increased risk for stroke.  Go to the Stroke Predictor Page (link below), enter your information and the selected model will predict your risk of stroke.</p>
+                            <p>Of particular interest is seeing which "features" (such as age, BMI, smoking status...) have the most influence on determining a persons risk for stroke.  Are the features equally important or do 
+                                some features have a greater impact?  Knowing such information can allow meaningful interventions to reduce the risk.  The machine learning routines allow extraction of the feature importance.  Two 
+                                different approaches were evaluated.  First standard feature importance approach 
+                                in SciKitLearn was employed; and second the permutation feature importance. 
+                                and also the 
+                            </p>
+                            <ul>
+                                    <li>Scikit-learns Feature Importance: Looks at the information gain (entropy) as features are adjusted.  This approach is prone to over-estimate the importance of continuous variables (such as BMI).
+                                    </li><br>
+                                    <li>Permutation Feature Importance: The permutation feature importance is defined to be the decrease in a model score when a single feature value is randomly shuffled
+                                    </li>
+                            </ul>
+                                <p> The resulting feature importance analysis is shown in the plots below.</p>
+
+                                <figure class = "figure">
+                                    <img src = "\static\images\feature_importance.png" class="figure-img img-fluid rounded" alt = "feature importance">
+                                    <center> <figcaption class = "figure-caption">Calculated feature importance for (a) Scikit-learns feature importance method and (b) Permutation Feature Importance</figcaption>
+                                    </center>
+                                </figure>
+                             <p> Both methods show that age, average glucose level and BMI are the leading indicators of stroke risk.  After these top three the different approaches rank features differently.  Of particular interest is in both cases
+                                 there is minimal connection between heart disease and risk of stroke. </p>   
+                                 <br>
+                            <p>The random forest machine learning approach, the best performer between the models, was used to create a risk of stroke prediction tool.
+                                
+                            Go to the Stroke Predictor Page (link below), enter your information and the selected model will predict your risk of stroke.</p>
                              
                             <center></center><a class="nav-link" href="/strokePredictor">Stroke Predictor</a><center></center>
                                      
