@@ -31,7 +31,10 @@ img {
     border-radius: 5px;
 }
 
-    border-radius: 5px;
+p#disclaimer {
+    font-size: 10px;
+    font-style: oblique;
+    text-align: center;
 }
 
 .chart-info {

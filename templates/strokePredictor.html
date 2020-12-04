@@ -83,9 +83,9 @@
             <div class="col-lg-10">
                 <p>
                     <center>Fill in your details below and click <strong>Submit Form</strong> to determine your
-                        prediction.</center>
+                        prediction.*</center>
                 </p>
-                <br>
+                                <br>
                 <!-- Input section using form and post method -->
                 <form action="{{url_for('strokePredictorData')}}" method="post" class="form">
 
@@ -297,10 +297,11 @@
         </center>
         
         <center><h4 id="prediction">{{ prediction_text }}</h4></center>
-        <br>
         <center>
             <img src= {{bunny_link}} width=350 height=200/>
         </center>
+
+        <p id="disclaimer">*DISCLAIMER: This project is used for demonstrative and illustrative purposes only and does not constitute an offering that has gone through regulatory review. It is not intended to serve as a medical application. There is no representation as to the accuracy of the output of this application and it is presented without warranty express or implied.</p>
 
     </div>
 
