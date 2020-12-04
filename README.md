@@ -33,4 +33,4 @@ In this project we examined 43,400 rows of data pertaining to individuals, in or
 After building and exporting our machine learning model, we build a Python Flask app to produce an HTML page embedded with JavaScript. The HTML page offers a form for users to enter their own information into, while the JavaScript reads the results from Flask and writes the results to the page accordingly.
 
 ### Project Website
-Heroku App location: https://
+Heroku App location: https://team5finalproject.herokuapp.com/
