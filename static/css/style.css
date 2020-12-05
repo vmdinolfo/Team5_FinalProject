@@ -34,9 +34,11 @@ img {
 }
 
 p#disclaimer {
-    font-size: 10px;
+    font-size: 18px;
     font-style: oblique;
     text-align: center;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 .chart-info {
