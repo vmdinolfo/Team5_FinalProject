@@ -36,9 +36,9 @@ After building and exporting our machine learning model, we build a Python Flask
 Heroku App location: https://team5finalproject.herokuapp.com/
 
 #### Website pages:
-	History of Stroke  
-	Stroke Predictor  
-	Data Analysis through Charts  
-	Machine Learning Models for Predicting Risk of Stroke  
-	Resources  
-	About Us 
+History of Stroke  
+Stroke Predictor  
+Data Analysis through Charts  
+Machine Learning Models for Predicting Risk of Stroke  
+Resources  
+About Us 
